@@ -11,8 +11,8 @@ TOKENIZER_FILE = "tokenizer.json"
 OUTPUT_DIR = "./processed_data"
 BLOCK_SIZE = 2048 
 
-LIMIT_FINEWEB = 1_000_000   # high-quality English
-LIMIT_C4_TH = 1_000_000     # diverse Thai
+LIMIT_FINEWEB = 100_000   # high-quality English
+LIMIT_C4_TH = 100_000     # diverse Thai
 LIMIT_CODE = 20_000       # Python code samples
 LIMIT_CHAT = 50_000       # Chat logs
 

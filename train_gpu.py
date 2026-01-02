@@ -4,7 +4,7 @@ from datasets import load_dataset
 from chat import m, model
 from model import learning_rate, max_iters, eval_interval, eval_iters, device, block_size, batch_size
 
-optimizer = torch.optim.AdamW(model.parameters(), lr=learning_rate)\
+optimizer = torch.optim.AdamW(model.parameters(), lr=learning_rate)
 
 dataset = load_dataset("PHNG/chatmed-thaigpt1k-th", split='train', streaming=True)
 

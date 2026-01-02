@@ -5,7 +5,7 @@ from torch.nn import functional as F
 from wordtokenizer import tokenizer
 from RoPE import RotaryPositionalEmbedding
 
-batch_size = 32      # How many independent sequences will we process in parallel?
+batch_size = 2048      # How many independent sequences will we process in parallel?
 block_size = 64      # What is the maximum context length for predictions?
 max_iters = 2000     # Total training iterations
 eval_interval = 300
@@ -15,11 +15,10 @@ eval_iters = 200
 n_embd = 768         # Embedding dimension
 n_head = 4           # Number of attention heads
 n_layer = 4          # Number of transformer blocks
-kv_lora_rank = 64    # MLA: The dimension of the compressed latent vector
+kv_lora_rank = 512   # MLA: The dimension of the compressed latent vector
 dropout = 0.2
 
-vocab = tokenizer.get_vocab()
-vocab_size = tokenizer.get_vocab_size()
+vocab_size = 64000
 
 class MultiHeadLatentAttention(nn.Module):
     
